@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #263238;</string>
+  </property>
+  <widget class="QLabel" name="spo_title">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>40</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(200, 200, 200);
+</string>
+   </property>
+   <property name="text">
+    <string>SpO2 (%)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pulse_title">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>40</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(200, 200, 200);</string>
+   </property>
+   <property name="text">
+    <string>Pulse (bpm)</string>
+   </property>
+  </widget>
+  <widget class="PlotWidget" name="graphwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>1004</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>70</y>
+     <width>40</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="spo_value">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>70</y>
+     <width>170</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>70</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #0039cb;
+border: 3px solid rgb(150, 150, 150);
+background-color: #000a12;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pulse_value">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>70</y>
+     <width>170</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>70</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #009624;
+border: 2px solid rgb(150, 150, 150);
+
+background-color: #000a12;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="status_label">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>210</y>
+     <width>161</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(200, 200, 200);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>1004</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(150, 150, 150);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="history_value">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>70</y>
+     <width>241</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #000a12;
+color: #f05545;
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="control_button">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>210</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(200, 200, 200);</string>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="imageqrc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
