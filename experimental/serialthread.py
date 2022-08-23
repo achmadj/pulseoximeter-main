@@ -20,10 +20,6 @@ class ThreadData(QThread):
     QThread.__init__(self)
     self.isrunnings = True
     self.serial = serial.Serial("COM7")
-    self.serial.close()
-    self.serial.open()
-    self.serial.flush()
-    self.serial.reset_input_buffer()
     self.maxValueGraph = 500
 
   def stop(self):
